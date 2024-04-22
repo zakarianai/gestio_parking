@@ -27,6 +27,7 @@ public class AdminServiceImpl implements AdminService{
     @Override
 
     public AdminDto SaveAdmin(AdminDto adminDto) {
+        System.out.println("hello");
         Admin admin =adminMappers.fromAdminDto(adminDto);
         Admin admin1=adminRepository.save(admin);
         return adminMappers.fromAdmin(admin1);
